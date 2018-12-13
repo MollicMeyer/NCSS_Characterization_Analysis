@@ -73,7 +73,7 @@ s5 <- subsetProfiles(s4, h = 'oc > 0')
 ## here's a better method; which means "not equal to NA value"
 s3_no_soc <- s3[which(!is.na(s3$oc)), ]
 
-#######################################Depth Function Portion##########################################################################
+## #####################################Depth Function Portion##########################################################################
 ## s3 is the cleaned dataset; now we slice SOC, clay content and pH 1:1 into 1 cm depth increments to 200 cm 
 ssl <- slice(s3, fm= 0:200 ~ oc + clay + ph_h2o)
 ## Slabbing groups these depth slices based on fm = yr ~; yr is the grouped year class
@@ -103,7 +103,7 @@ xyplot(top ~ p.q50 | variable, groups=yr,  data=Tamaslb, ylab='Depth',
        auto.key=list(columns=4, lines=TRUE, points=FALSE)
 )
 
-####################################Making pretty boxplots with ggplot2################################################################
+## ##################################Making pretty boxplots with ggplot2################################################################
 ### So my groups wouldn't show on the graph in Temporal order; so i had to make an ordered factor attribute called yr2
 s$yr2<- factor(s$yr, levels = c("pre-1960", "'64 to '69", "'71 to '76", "'78 to '83", "'84 to '88"))
 ## anytime you use title = that becomes the title; so you can't have multiple title objects unless you say titlename <- title = "Title"
@@ -182,7 +182,7 @@ boxplot2 + theme(
 )
 
 boxplot2
-###################################Statistical Test (Welch's T-test)############################################################
+## #################################Statistical Test (Welch's T-test)############################################################
 ## subset to get the vector list for statistical comparison
 ## this is not the most efficient way to subset to vector because it creates a new SPC from which I subset again in the $site column to ##get the vector
 Apre1976 <- s3[s3$A_thickness]
