@@ -2,7 +2,7 @@
 ### Code to import NCSS characterization pedons, clean dataset, create visualizations, and perform statistics.
 ### R 3.5.1
 #### This script was my exploratory analysis for a paper I'm currently working on.
-#### Temporal Dynamics of the Tama Soil Series: A Mandate for Reevaluation of the Central Series Concept Currently being edited
+#### Temporal Dynamics of the Tama Soil Series: A Mandate for Reevaluation of the Central Series Concept (currently being edited)
 
 ```
 ## Load Library
@@ -33,7 +33,7 @@ plot(s, name='hzn_desgn', cex.names=0.85, axis.line.offset=-4, color='oc')
 ```
 ### This portion is due to my lack of R skills
 ##### Priority #1: Learn how to write a function that calculates horizon thickness
-#### Until then we write to excel files and perform calculations with pivot tables
+#### Until then, write to excel files and perform calculations with pivot tables
 ```
 ## export site data
 ## carbon is not a great name here; probably should switch to Tama
@@ -59,9 +59,8 @@ boxplot(s$A_thickness ~ s$yr)
 boxplot(s$A_thickness ~ s$yr)
 ``` 
 #### Challenge 2: Need better R skills to clean these data
-#### Until then; we subset bad ones after analyzing the profile plot
-
-#### Challenge 3 pedon 71270 has bad horizonation; apparently the first code didnt fix it; had overlapping boundaries 
+#### Until then, we subset to remove bad data after analyzing the profile plot
+#### Challenge 3: pedon 71270 has bad horizonation; apparently the first code didnt fix it; had overlapping boundaries 
 ```
 s2 <- subsetProfiles(s, s = 'pedon_key != 71270')
 ## analysis shows that pre-1960 pedons have a multitude of issues with incomplete data
