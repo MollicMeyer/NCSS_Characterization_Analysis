@@ -1,8 +1,8 @@
 # NCSS_Characterization_Analysis
-## Code to import NCSS characterization pedons, clean dataset, create visualizations, and perform statistics.
-# R 3.5.1
-# This script was my exploratory analysis for a paper I'm currently working on.
-# Temporal Dynamics of the Tama Soil Series: A Mandate for Reevaluation of the Central Series Concept ##Currently being edited #12/13/2018
+### Code to import NCSS characterization pedons, clean dataset, create visualizations, and perform statistics.
+### R 3.5.1
+#### This script was my exploratory analysis for a paper I'm currently working on.
+#### Temporal Dynamics of the Tama Soil Series: A Mandate for Reevaluation of the Central Series Concept Currently being edited ####12/13/2018
 
 ```
 ## Load Library
