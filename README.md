@@ -17,7 +17,7 @@ library(RColorBrewer)
 library(plotrix)
 library(ggplot2)
 
-##Import Tama Pedons from NCSS
+## Import Tama Pedons from NCSS
 s <- fetchKSSL(series='Tama')
 
 ## Get bottom soil depth for pedons
